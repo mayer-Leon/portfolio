@@ -1,0 +1,21 @@
+ #menuFilme, #dialogFilme {
+    color: white;
+}
+
+#space {
+    height: var(--menuHeight);
+}
+
+.videos {
+    width: 95%;
+    max-width: 1000px;
+    max-height: 500px;
+    border-radius: 5px;
+}
+
+.width80 {
+    width: 80%;
+    max-width: 800px;
+    margin-top: 20px;
+    margin-bottom: 80px;
+}
