@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leon Mayer - Portfolio</title>
+    <link rel="stylesheet" href="/portfolio/standard.css">
+    <link rel="stylesheet" href="/portfolio/fotogalerie.css">
+    <link rel="icon" type="image/x-icon" href="/portfolio/Fotos/Favicon.png">
+</head>
+<body>
+    <h2>Portfolio</h2>
+    <h1 class="H1" style="margin-bottom: 10px;">Leon Mayer</h1>
+    <hr id="firstHr">
+    <div id="buttons">
+        <a href="/portfolio" style="color: black; background-color: white; font-weight: 600;">FOTOS</a>
+        <a href="/portfolio/filme">FILME</a>
+        <a href="/portfolio/über-mich">ÜBER MICH</a>
+    </div>
+    <hr id="secondHr">
+    
+    <div id="gallery">
+        <img src="/portfolio/Fotos/IMG2024-0220.jpg" class="galleryPhotos" loading="lazy" onclick="currentSlide(1)">
+        <img src="/portfolio/Fotos/IMG2024-0601.jpg" class="galleryPhotos" loading="lazy" onclick="currentSlide(2)">
+        <img src="/portfolio/Fotos/IMG2024-0432.jpg" class="galleryPhotos" loading="lazy" onclick="currentSlide(3)">
+        <img src="/portfolio/Fotos/IMG2024-0430.jpg" class="galleryPhotos" loading="lazy" onclick="currentSlide(4)">
+
+        <img src="/portfolio/Fotos/IMG2024-0388.jpg" class="galleryPhotos" loading="lazy" onclick="currentSlide(5)">
+        <img src="/portfolio/Fotos/IMG2024-0387.jpg" class="galleryPhotos" loading="lazy" onclick="currentSlide(6)">
+        <img src="/portfolio/Fotos/IMG2024-0289.jpg" class="galleryPhotos" loading="lazy" onclick="currentSlide(7)">
+        <img src="/portfolio/Fotos/DSC02227.jpg" class="galleryPhotos" loading="lazy" onclick="currentSlide(8)">
+        
+        <img src="/portfolio/Fotos/IMG2024-0438.jpg" class="galleryPhotos" loading="lazy" onclick="currentSlide(9)">
+        <img src="/portfolio/Fotos/PIC04850.jpg" class="galleryPhotos" loading="lazy" onclick="currentSlide(10)">
+        <img src="/portfolio/Fotos/PIC07143.jpg" class="galleryPhotos" loading="lazy" onclick="currentSlide(11)">
+        <img src="/portfolio/Fotos/PIC05543.jpg" class="galleryPhotos" loading="lazy" onclick="currentSlide(12)">
+        
+        <img src="/portfolio/Fotos/IMG2024-0671.jpg" class="galleryPhotos" loading="lazy" onclick="currentSlide(13)">
+        <img src="/portfolio/Fotos/PIC03129.jpg" class="galleryPhotos" loading="lazy" onclick="currentSlide(14)">
+        <img src="/portfolio/Fotos/IMG2024-0767.jpg" class="galleryPhotos" loading="lazy" onclick="currentSlide(15)">
+        <img src="/portfolio/Fotos/TAC00059.jpg" class="galleryPhotos" loading="lazy" onclick="currentSlide(16)">
+
+        <img src="/portfolio/Fotos/PIC05027.jpg" class="galleryPhotos" loading="lazy" onclick="currentSlide(17)">
+        <img src="/portfolio/Fotos/IMG08939.jpg" class="galleryPhotos" loading="lazy" onclick="currentSlide(18)">
+
+        <img src="/portfolio/Fotos/IMG08244.jpg" class="galleryPhotos" loading="lazy" onclick="currentSlide(19)">
+        <img src="/portfolio/Fotos/IMG08201.jpg" class="galleryPhotos" loading="lazy" onclick="currentSlide(20)">
+
+        <img src="/portfolio/Fotos/IMG2024-0402.jpg" class="galleryPhotos" loading="lazy" onclick="currentSlide(21)">
+        <img src="/portfolio/Fotos/IMG2024-0095.jpg" class="galleryPhotos" loading="lazy" onclick="currentSlide(22)">
+        
+        <img src="/portfolio/Fotos/IMG2024-0032.jpg" class="galleryPhotos" loading="lazy" onclick="currentSlide(23)">
+
+        <img src="/portfolio/Fotos/IMG2024-0160.jpg" class="galleryPhotos" loading="lazy" onclick="currentSlide(24)">
+        
+        <img src="/portfolio/Fotos/IMG2024-0232.jpg" class="galleryPhotos" loading="lazy" onclick="currentSlide(25)">
+        <img src="/portfolio/Fotos/IMG08048.jpg" class="galleryPhotos" loading="lazy" onclick="currentSlide(26)">
+        <img src="/portfolio/Fotos/IMG2024-0675.jpg" class="galleryPhotos" loading="lazy" onclick="currentSlide(27)">
+    </div>
+
+    <div id="fullScreen">
+        <button class="fullScreenButton" id="closeFullScreen" onclick="closeFullScreen()">✖</button>
+        <button class="fullScreenButton" id="prev" onclick="plusSlides(-1)">&#10094;</button>
+        <button class="fullScreenButton" id="next" onclick="plusSlides(+1)">&#10095;</button>
+    </div>
+
+    <div id="dynamic-gallery"></div>
+
+    <div id="footer">
+        <p>©Leon Mayer, 2024</p>
+    </div>
+
+    <script src="/portfolio/fotogalerie.js"></script>    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</body>
+</html>

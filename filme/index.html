@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leon Mayer - Portfolio</title>
+    <link rel="stylesheet" href="/portfolio/standard.css">
+    <link rel="stylesheet" href="/portfolio/filme.css">
+    <link rel="icon" type="image/x-icon" href="/portfolio/Fotos/Favicon.png">
+    <style>
+        #menuHome:hover {
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h2>Portfolio</h2>
+    <h1 class="H1" style="margin-bottom: 10px;">Leon Mayer</h1>
+    <hr id="firstHr">
+    <div id="buttons">
+        <a href="/portfolio">FOTOS</a>
+        <a href="/portfolio/filme" style="color: black; background-color: white; font-weight: 600;">FILME</a>
+        <a href="/portfolio/über-mich">ÜBER MICH</a>
+    </div>
+    <hr id="secondHr">
+    <h3 style="margin-bottom: 2px;">Griechenland 2024 - Highlights</h3>
+    <p style="color: #b8b8b8; margin-top: 0; font-size: 0.9rem;" >Gesamte Produktion</p>
+    <iframe width="1280" height="640" src="https://www.youtube.com/embed/SDPRp-0QzoE?rel=0&vq=hd1080" title="Maibaumfest 2024" class="videos" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <hr class="width80">
+    <h3 style="margin-bottom: 2px;">Maibaumfest 2024</h3>
+    <p style="color: #b8b8b8; margin-top: 0; font-size: 0.9rem;">Kameraführung (großteils), Schnitt</p>
+    <iframe width="1280" height="640" src="https://www.youtube.com/embed/i1Dke2Pkg2s?rel=0&vq=hd1080" title="Maibaumfest 2024" class="videos" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <hr class="width80">
+    <h3 style="margin-bottom: 2px;">Schotter-Flüge</h3>
+    <p style="color: #b8b8b8; margin-top: 0; font-size: 0.9rem;">Drohnenführung, Schnitt, Color-Grading</p>
+    <iframe width="1280" height="640" src="https://www.youtube.com/embed/bCW0jVnxfGk?rel=0&vq=hd1080" title="Schotter Flüge" class="videos" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+    <div id="footer">
+        <p>©Leon Mayer, 2024</p>
+    </div>
+
+    <script>
+        const dialog = document.getElementById("menuDialog");
+
+        function showDialog() {
+            menuDialog.style.opacity = "1";
+            menuDialog.style.pointerEvents = "all";
+            let blur = document.getElementById("blur");
+            blur.style.backgroundColor = "#0000006a";
+            blur.style.backdropFilter = "blur(5px)";
+            blur.style.webkitBackdropFilter = "blur(5px)";
+            blur.style.pointerEvents = "all";
+        };
+
+        function closeDialog() {
+            menuDialog.style.opacity = "0";
+            menuDialog.style.pointerEvents = "none";
+            let blur = document.getElementById("blur");
+            blur.style.backgroundColor = "#00000000";
+            blur.style.backdropFilter = "blur(0px)";
+            blur.style.webkitBackdropFilter = "blur(0px)";
+            blur.style.pointerEvents = "none";
+        };
+
+        const videos = document.querySelectorAll(".videos");
+        videos.forEach(video => {
+        video.style.height = document.body.scrollWidth * 0.95 / 2 + "px";
+        });
+    </script>
+</body>
+</html>
