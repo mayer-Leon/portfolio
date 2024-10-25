@@ -236,6 +236,10 @@ const sourceDiv = document.getElementById('gallery');
     for (let i = 0; i < images.length; i++) {
         // Clone the image
         const clonedImage = images[i].cloneNode(true);
+
+        
+        const currentSrc = clonedImage.src;
+        clonedImage.src = currentSrc.replace("/Fotos/small/", "/Fotos/");
         
         // Add the "fullScreen" class to the cloned image
         clonedImage.classList.add('fullScreen');
@@ -383,6 +387,9 @@ function getHeight() {
 window.onload = function() {
     originalHeight = getHeight();
 };
+
+function switchSource(img) {
+}
 
 function expand() {
     clickCounter++;
