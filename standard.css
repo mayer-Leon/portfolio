@@ -40,13 +40,13 @@ body {
 
 h1 {
     margin-bottom: 0px;
-    margin-top: 0px;
-    font-weight: 700;
+    margin-top: -10px;
+    padding-top: -10px;
     font-size: 2.2rem;
 }
 
 h2 {
-    margin-top: 20px;
+    margin-top: 30px;
     margin-bottom: 0px;
     font-weight: 600;
     font-size: 1.5rem;
@@ -97,7 +97,6 @@ button {
     width: 454px;
     overflow: hidden;
     margin: auto;
-    border-radius: 5px;
 }
 
 #buttons a {
@@ -157,5 +156,20 @@ button:hover {
 
 #footer a {
     display: block;
-    margin-top: -30px;
+}
+
+#socials {
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 30px;
+    gap: 5px;
+    margin-top: 15px;
+}
+
+#socials a img {
+    width: 25px;
+    mix-blend-mode: screen;
 }
