@@ -138,11 +138,6 @@
     z-index: 3;
 }
 
-.fullScreenButton:hover {
-    background-color: #ffffff;
-    color: black;
-}
-
 #closeFullScreen {
     right: 30px;
 }
@@ -162,4 +157,11 @@
 #next {
     bottom: 30px;
     right: 30px;
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .fullScreenButton:hover {
+        background-color: #ffffff;
+        color: black;
+    }
 }
