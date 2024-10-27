@@ -113,10 +113,6 @@ button {
     border-radius: 2px;
 }
 
-#buttons a:hover {
-    background-color: rgb(83, 83, 83);
-}
-
 hr {
     border-color: rgba(255, 255, 255, 0.552);
     border-radius: 5px;
