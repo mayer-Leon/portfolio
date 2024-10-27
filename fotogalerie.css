@@ -165,3 +165,8 @@
         color: black;
     }
 }
+
+.fullScreenButton:active {
+    background-color: #ffffff;
+    color: black;
+}
