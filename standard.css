@@ -173,3 +173,9 @@ button:hover {
     width: 25px;
     mix-blend-mode: screen;
 }
+
+@media (hover: hover) and (pointer: fine) {
+    #buttons a:hover {
+        background-color: rgb(83, 83, 83);
+    }
+}
