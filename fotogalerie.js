@@ -268,6 +268,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 function closeFullScreen() {
+    let socials = document.getElementById("socials");
+    socials.style.opacity = "1";
 
     prev.disabled = true;
     next.disabled = true;
@@ -353,6 +355,8 @@ function showSlides(n) {
   slides[slideIndex - 1].style.display = "flex";
   fullScreen.style.display = "block";
   document.body.style.overflow = 'hidden';
+  let socials = document.getElementById("socials");
+  socials.style.opacity = "0";
   
 
 prev.disabled = false;

@@ -90,7 +90,19 @@
     top: 0;
     left: 0;
     display: none;
+    user-select: none;
+    -webkit-user-select: none; /* Safari and Chrome */
+    -moz-user-select: none;    /* Firefox */
+    -ms-user-select: none;
 }
+
+#fullScreen button {
+    user-select: none;
+    -webkit-user-select: none; /* Safari and Chrome */
+    -moz-user-select: none;    /* Firefox */
+    -ms-user-select: none;
+}
+
 .fullScreen:hover {
     cursor: default;
 }
@@ -159,14 +171,37 @@
     right: 30px;
 }
 
+@media (hover: none) and (pointer: coarse), (any-pointer: coarse) {
+    .fullScreenButton:hover {
+        animation: hoverEffect 200ms forwards;
+    }
+}
+
+    @keyframes hoverEffect {
+        0% {
+            background-color: #0f0f0f7a;
+            color: white;
+        }
+
+        20% {
+            background-color: white;
+            color: black;
+        }
+
+        80% {
+            background-color: white;
+            color: black;
+        }
+
+        100% {
+            background-color: #0f0f0f7a;
+            color: white;
+        }
+    }
+
 @media (hover: hover) and (pointer: fine) {
     .fullScreenButton:hover {
         background-color: #ffffff;
         color: black;
     }
-}
-
-.fullScreenButton:active {
-    background-color: #ffffff;
-    color: black;
 }
