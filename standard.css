@@ -150,6 +150,12 @@ button:hover {
     margin-top: 0;
 }
 
+#mail {
+    display: none;
+    margin-bottom: 15px;
+    margin-top: 5px;
+}
+
 #footer a {
     display: block;
 }
@@ -162,10 +168,22 @@ button:hover {
     justify-content: center;
     height: 30px;
     gap: 5px;
-    margin-top: 15px;
+    margin-top: 0px;
+    margin-bottom: 25px;
 }
 
-#socials a img {
+#socials button {
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+}
+
+#socials p {
+    margin-right: 3px;
+    padding-top: 6px;
+}
+
+#socials a img, #socials button img {
     width: 25px;
     mix-blend-mode: screen;
 }
