@@ -41,34 +41,20 @@
 
     <div id="footer">
         <p>©Leon Mayer, 2024</p>
-        <a href="mailto:leonmayer.fotos@gmail.com">leonmayer.fotos@gmail.com</a>
         <div id="socials">
-            <a href="https://instagram.com/leonm.fotos/"><img src="/portfolio/Fotos/Insta.jpg" alt="Instagram"></a>
-            <a href="https://youtube.com/@leonm.videos/"><img src="/portfolio/Fotos/YT.jpg" alt="YouTube"></a>
+            <button onclick="email()"><img src="Fotos/Mail.jpg" alt="E-Mail"></button>
+            <a href="https://youtube.com/@leonm.videos/"><img src="Fotos/YT.jpg" alt="YouTube"></a>
+            <a href="https://instagram.com/leonm.fotos/"><img src="Fotos/Insta.jpg" alt="Instagram"></a>
         </div>
+        <a href="mailto:leonmayer.fotos@gmail.com" id="mail" style="display: none;">leonmayer.fotos@gmail.com</a>
     </div>
 
     <script>
-        const dialog = document.getElementById("menuDialog");
-
-        function showDialog() {
-            menuDialog.style.opacity = "1";
-            menuDialog.style.pointerEvents = "all";
-            let blur = document.getElementById("blur");
-            blur.style.backgroundColor = "#0000006a";
-            blur.style.backdropFilter = "blur(5px)";
-            blur.style.webkitBackdropFilter = "blur(5px)";
-            blur.style.pointerEvents = "all";
-        };
-
-        function closeDialog() {
-            menuDialog.style.opacity = "0";
-            menuDialog.style.pointerEvents = "none";
-            let blur = document.getElementById("blur");
-            blur.style.backgroundColor = "#00000000";
-            blur.style.backdropFilter = "blur(0px)";
-            blur.style.webkitBackdropFilter = "blur(0px)";
-            blur.style.pointerEvents = "none";
+        function email() {
+            let mail = document.getElementById("mail");
+            mail.style.display = "block";
+            let socials = document.getElementById("socials");
+            socials.style.marginBottom = "0px";
         };
 
         const videos = document.querySelectorAll(".videos");
