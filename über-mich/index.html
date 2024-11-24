@@ -77,30 +77,53 @@
             socials.style.marginBottom = "0px";
         };
         
-        var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-        var scrollLeft = window.pageXOffset || document.documentElement.scrollLeft;
+        (function() {
+    let isScrollLocked = false;
+    let scrollPosition = { x: 0, y: 0 };
+
+        // Function to handle scroll lock
+        function handleScrollLock() {
+            if (isScrollLocked) {
+                // Keep the user at the locked position
+                window.scrollTo(scrollPosition.x, scrollPosition.y);
+            } else {
+                // Update the current scroll position
+                scrollPosition = { x: window.scrollX, y: window.scrollY };
+            }
+        }
+
+        // Attach the scroll event listener
+        window.addEventListener("scroll", handleScrollLock);
+
+        // Expose the toggle function globally
+        window.toggleScrollLock = function(lock) {
+            isScrollLocked = lock;
+
+            if (isScrollLocked) {
+                // Save the current scroll position when locking
+                scrollPosition = { x: window.scrollX, y: window.scrollY };
+            }
+        };
+    })();
+
 
         function fullLeon() {
             leon.style.display = "inline";
-            fullPhotos.style.display = "flex";    
-            window.onscroll = function() {
-            window.scrollTo(scrollLeft, scrollTop);
-            };
-        }
+            fullPhotos.style.display = "flex";
+            toggleScrollLock(true);
+        };
 
         function fullKamera() {
             kamera.style.display = "inline";
             fullPhotos.style.display = "flex";
-            window.onscroll = function() {
-            window.scrollTo(scrollLeft, scrollTop);
-            };
+            toggleScrollLock(true);
         }
 
         function closeImage() {
             kamera.style.display = "none";
             leon.style.display = "none";
             fullPhotos.style.display = "none";
-            window.onscroll = null;
+            toggleScrollLock(false);
         }
 
     </script>
