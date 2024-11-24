@@ -2,12 +2,12 @@
 
 :root {
     --bg: #0f0f0f;
-    --button: #101010;
+    --button: #2f2f2f;
     --text: #ffffff;
     --white: #ffffff;
     --darkGrey: #b6b6b6;
     --lightGrey: #464646;
-    --menu: #212121;
+    --menu: #373737;
     --menuOver: #5555558e;
     --theme: #2179ac;
     --themeLight: #ffffff;
@@ -92,15 +92,15 @@ button {
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 2px;
+    gap: 3px;
     max-width: 90%;
-    width: 454px;
+    width: 456px;
     overflow: hidden;
     margin: auto;
 }
 
 #buttons a {
-    background-color: rgb(44, 44, 44);
+    background-color: var(--button);
     display: inline;
     position: relative;
     text-decoration: none;
@@ -110,11 +110,13 @@ button {
     font-size: 1.1rem;
     font-weight: 500;
     transition: 200ms;
-    border-radius: 2px;
+    border-radius: 3px;
 }
 
 hr {
-    border-color: rgba(255, 255, 255, 0.552);
+    border-color: #838383;
+    border-style: solid;
+    border-width: 1px;
     border-radius: 5px;
 }
 
@@ -130,7 +132,7 @@ button:hover {
     cursor: pointer;
 }
 
-@media (max-width: calc(522px)) {
+@media (max-width: calc(523px)) {
     #buttons {
         width: 400px;
     }
