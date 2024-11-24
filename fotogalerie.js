@@ -96,14 +96,15 @@ function width() {
 
 
 document.addEventListener("keydown", function(event) {
-    event.preventDefault();
     if (event.key === "ArrowLeft" || event.key === "a") {
+        event.preventDefault();
         prev.click();
-    }
-    else if (event.key === "ArrowRight" || event.key === "d") {
+    } else if (event.key === "ArrowRight" || event.key === "d") {
+        event.preventDefault();
         next.click();
     }
-  });
+    // Do not preventDefault for other keys (like F11 or Ctrl+S)
+});
 
 
 
