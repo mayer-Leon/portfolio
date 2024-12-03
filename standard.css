@@ -201,3 +201,7 @@ button:hover {
         background-color: rgb(83, 83, 83);
     }
 }
+
+.xs {
+    font-size: 10px;
+}
