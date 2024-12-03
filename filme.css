@@ -19,3 +19,20 @@
     margin-top: 20px;
     margin-bottom: 80px;
 }
+
+.comingSoon {
+    background-color: #11202b;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 95%;
+    max-width: 1000px;
+    border-radius: 5px;
+}
+
+.comingSoon p {
+    font-size: 15px;
+    font-weight: 500;
+}
