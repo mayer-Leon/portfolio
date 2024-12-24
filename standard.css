@@ -5,6 +5,7 @@
     --button: #2f2f2f;
     --text: #ffffff;
     --white: #ffffff;
+    --black: #000000;
     --darkGrey: #b6b6b6;
     --lightGrey: #464646;
     --menu: #373737;
@@ -34,7 +35,7 @@ body {
 }
 
 ::selection {
-    color: #000000;
+    color: var(--black);
     background-color: var(--white);
 }
 
@@ -63,7 +64,7 @@ h2 {
 }
 
 a {    
-    color: white;
+    color: var(--white);
 }
 
 p {
@@ -72,8 +73,6 @@ p {
 }
 
 button {
-    background-color: #afafaf;
-    color: black;
     font-family: "Poppins", sans-serif;
     font-size: 1.05rem;
     font-weight: 700;
@@ -109,7 +108,7 @@ button {
     font-size: 1.05rem;
     font-weight: 500;
     transition: 200ms;
-    border-radius: 3px;
+    border-radius: 4px;
 }
 
 hr {
