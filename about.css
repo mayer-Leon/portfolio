@@ -29,7 +29,7 @@
     width: 25%;
     position: relative;
     overflow: hidden;
-    border-radius: 5px;
+    border-radius: 3px;
     margin: 0;
 }
 
@@ -117,7 +117,7 @@
 #mobileFotos img {
     width: calc(50% - 5px);
     max-width: 250px;
-    border-radius: 5px;
+    border-radius: 3px;
     margin-bottom: 40px;
 }
 
@@ -130,7 +130,7 @@
         display: none;
     }
 
-    .texts, #texts2, #intro {
+    .texts, #texts2, #intro, #outro {
         width: 100%;   
     }
 
@@ -141,6 +141,12 @@
 
     #mobileFotos {
         display: flex;
+    }
+}
+
+@media (min-width: 861px) {
+    #outro {
+        width: 90%;
     }
 }
 
@@ -165,7 +171,7 @@
     max-width: 95%;
     max-height: 95%;
     aspect-ratio: 2 / 3;
-    border-radius: 5px; /* Apply rounded corners here */
+    border-radius: 3px; /* Apply rounded corners here */
     overflow: hidden; /* Ensure the image respects the border-radius */
     justify-content: center;
     align-items: center;
