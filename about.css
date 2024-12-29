@@ -235,6 +235,9 @@
     .contentItem img {
         width: 25px;
         height: 25px;
+        user-select: none;
+        -moz-user-select: none;
+        -webkit-user-select: none;
     }
 
     .contentItem p {
