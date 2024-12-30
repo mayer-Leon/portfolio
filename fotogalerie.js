@@ -96,10 +96,10 @@ function width() {
 
 
 document.addEventListener("keydown", function(event) {
-    if (event.key === "ArrowLeft" || event.key === "a") {
+    if (event.key === "ArrowLeft" || event.key === "a" || event.key === "PageUp") {
         event.preventDefault();
         prev.click();
-    } else if (event.key === "ArrowRight" || event.key === "d") {
+    } else if (event.key === "ArrowRight" || event.key === "d" || event.key === "PageDown") {
         event.preventDefault();
         next.click();
     }
