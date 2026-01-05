@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="Leon Mayer - Portfolio">
+    <meta property="og:description" content="Eine Sammlung meiner besten Fotos und Filme.">
+    <meta property="og:image" content="/portfolio/Bilder/Preview.jpg">
+    <title>Leon Mayer - Portfolio</title>
+    <link rel="stylesheet" href="/portfolio/standard.css">
+    <link rel="stylesheet" href="/portfolio/about.css">
+    <link rel="icon" type="image/x-icon" href="/portfolio/Bilder/Favicon.png">
+    <style>
+        #menuAbout:hover {
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h2>Portfolio</h2>
+    <h1 style="margin-bottom: 10px;">Leon Mayer</h1>
+    <div id="buttons">
+        <a href="/portfolio/">FOTOS</a>
+        <a href="/portfolio/filme/">FILME</a>
+        <a href="/portfolio/über-mich/" class="shadow" style="color: black; background-color: white; font-weight: 600;">ÜBER MICH</a>
+    </div>
+    <a href="/portfolio/kontakt/" class="contact">Kontaktiere mich hier</a>
+
+    <div class="content">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/-f7nJN2ZQUo?controls=1&showinfo=0&rel=0&modestbranding=1&vq=hd1080" class="videos" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+
+    <p>Hallo! Ich bin Leon, ein <span id="age"></span>-jähriger Foto- und Videograf. <img src="/portfolio/Bilder/Waving.png" height="18px"></p>
+
+    </p>
+        <hr>
+
+    <h3 class="heading">Meine Erfahrung</h3>
+    <table id="experience">
+        <tr class="exp">
+            <td class="expTime">seit 2022</td>
+            <td><div class="expCont">
+                <h5 class="expH">Fotoshootings mit Freunden</h5>
+                <p class="expP">Portraits, Momentaufnahmen, Auftritte, ... -> <a href="/portfolio/fotos/">Fotos</a></p>
+            </div></td>
+        </tr>
+        <tr class="exp">
+            <td class="expTime">seit 2024</td>
+            <td><div class="expCont">
+                <h5 class="expH">Foto- und Videograf für Events an meiner Schule</h5>
+                <p class="expP">Aufführungen, Reisen, Wettbewerbe, Feste, Sportaktivitäten, ...</p>
+            </div></td>
+        </tr>
+        
+        <tr class="exp">
+            <td class="expTime">seit 2024</td>
+            <td><div class="expCont">
+                <h5 class="expH">Filmen von Veranstaltungen</h5>
+                <p class="expP">Feste, Bälle, Behind-The-Scenes-Videos, ... → <a href="/portfolio/filme/">Filme</a></p>
+            </div></td>
+        </tr>
+        
+        <tr class="exp">
+            <td class="expTime">Juli/August 2025</td>
+            <td><div class="expCont">
+                <h5 class="expH">Ferialpraktikum bei Vanwegen</h5>
+                <p class="expP">Zweimonatiges Praktikum bei der Videoagentur Vanwegen in Wien</p>
+                <p class="expP">Aufgaben: Produktionsassistenz, Erstellung von Behind-The-Scenes-Material, Foto- und Videobearbeitung</p>
+            </div></td>
+        </tr>
+    </table>
+
+        <hr>
+
+    <h3 class="heading">Software</h3>
+
+    <h5 class="software">Davinci Resolve Studio</h5>
+    <p class="softTime">seit 2021</p>
+
+    <h5 class="software">Adobe Lightroom Classic</h5>
+    <p class="softTime">seit 2023</p>
+
+    <h5 class="software">Adobe Premiere Pro</h5>
+    <p class="softTime">seit 2025</p>
+
+
+    
+    <div id="footer">
+        <p>© Leon Mayer<br><span class="xs">08/2025</span></p>
+        <div id="socials">
+            <a href="https://instagram.com/leonm.fotos/"><img src="/portfolio/Bilder/Insta.jpg" alt="Instagram"></a>
+            <a href="https://youtube.com/@leonm.videos/"><img src="/portfolio/Bilder/YT.jpg" alt="YouTube"></a>
+            <a href="/portfolio/kontakt/"><img src="/Bilder/Mail.jpg" alt="E-Mail"></a>
+        </div>
+    </div>
+
+    <script>     
+        (function() {
+    let isScrollLocked = false;
+    let scrollPosition = { x: 0, y: 0 };
+
+        // Function to handle scroll lock
+        function handleScrollLock() {
+            if (isScrollLocked) {
+                // Keep the user at the locked position
+                window.scrollTo(scrollPosition.x, scrollPosition.y);
+            } else {
+                // Update the current scroll position
+                scrollPosition = { x: window.scrollX, y: window.scrollY };
+            }
+        }
+
+        // Attach the scroll event listener
+        window.addEventListener("scroll", handleScrollLock);
+
+        // Expose the toggle function globally
+        window.toggleScrollLock = function(lock) {
+            isScrollLocked = lock;
+
+            if (isScrollLocked) {
+                // Save the current scroll position when locking
+                scrollPosition = { x: window.scrollX, y: window.scrollY };
+            }
+        };
+    })();
+
+
+        function fullLeon() {
+            leon.style.display = "inline";
+            fullPhotos.style.display = "flex";
+            toggleScrollLock(true);
+        };
+
+        function fullKamera() {
+            kamera.style.display = "inline";
+            fullPhotos.style.display = "flex";
+            toggleScrollLock(true);
+        }
+
+        function closeImage() {
+            kamera.style.display = "none";
+            leon.style.display = "none";
+            fullPhotos.style.display = "none";
+            toggleScrollLock(false);
+        }
+
+        let birthDate = new Date("2009-08-02");
+        let newDate = new Date();
+        
+        let age = newDate.getFullYear() - birthDate.getFullYear();
+        
+        let hasHadBirthday = 
+        newDate.getMonth() > birthDate.getMonth() || 
+        (newDate.getMonth() === birthDate.getMonth() && newDate.getDate() >= birthDate.getDate());
+
+        if (!hasHadBirthday) {
+            age--;
+        }
+
+        document.getElementById("age").innerHTML = age;
+
+    </script>
+</body>
+</html>
