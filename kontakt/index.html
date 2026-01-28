@@ -1,61 +1,29 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="google-site-verification" content="gxlQo9ncnPRMfKp_xRqcJNYkzBzLmPYs5DAbG5XaQaI"/portfolio/>
-    <meta property="og:title" content="Leon Mayer - Portfolio">
-    <meta property="og:description" content="Eine Sammlung meiner besten Fotos und Filme.">
-    <meta property="og:image" content="/portfolio/Bilder/Preview.jpg">
-    <title>Kontakt - Leon Mayer</title>
-    <link rel="stylesheet" href="/portfolio/standard.css">
-    <link rel="stylesheet" href="/portfolio/kontakt.css">
-    <link rel="icon" type="image/x-icon" href="/portfolio/Bilder/Favicon.png">
+    <title>LEON MAYER - Fotograf und Videograf</title>
+    <meta property="og:title" content="LEON MAYER - Fotograf und Videograf">
+    <meta property="og:description" content="Eventfotos und -videos, Portraits, Kurzfilme, Travel-Content">
+    <meta property="og:image" content="/Bilder/5IMG-03.jpg">
+    <link rel="stylesheet" href="/standard.css">
+    <link rel="stylesheet" href="/kontakt.css">
+    <link rel="icon" type="image/x-icon" href="/Bilder/5IMG-04.png">
 </head>
 <body>
-   <h2>Portfolio</h2>
-   <h1 style="margin-bottom: 10px;">Leon Mayer</h1>
-    <div id="buttons">
-        <a href="/portfolio/">FOTOS</a>
-        <a href="/portfolio/filme/">FILME</a>
-        <a href="/portfolio/über-mich/">ÜBER MICH</a>
-    </div>
+    <header id="headerJS"></header>
 
     <main>
-        <hr>
-        <h3>Kontakt</h3>
-        <img src="/portfolio/Bilder/Gimbal-Fade.jpg" id="gimbal">
-        <p>Du brauchst einen Fotografen oder Videografen?</p>
+        <img src="/Bilder/5IMG-01.jpg" id="lKamera">
+        <p>Du willst mich kontaktieren?</p>
         <p>Hier kannst du mir schreiben:</p>
 
-        <a class="contact" href="mailto:leonmayer.fotos@gmail.com">leonmayer.fotos@gmail.com</a><br>
+        <a href="mailto:leonmayer.fotos@gmail.com" class="contact">leonmayer.fotos@gmail.com</a>
+    </main>
 
-    </main>    
+    <footer id="footerJS"></footer>
 
-    <div id="footer">
-        <p>© Leon Mayer<br><span class="xs">08/2025</span></p>
-        <div id="socials">
-            <a href="https://instagram.com/leonm.fotos/"><img src="/portfolio/Bilder/Insta.jpg" alt="Instagram"></a>
-            <a href="https://youtube.com/@leonm.videos/"><img src="/portfolio/Bilder/YT.jpg" alt="YouTube"></a>
-            <a href="/portfolio/kontakt/"><img src="/portfolio/Bilder/Mail.jpg" alt="E-Mail"></a>
-        </div>
-    </div>
-
-    <script>
-        const textarea = document.getElementsbyTagName('textarea')[0];
-
-        function resizeTextarea() {
-            textarea.style.height = 'auto';
-            textarea.style.height = textarea.scrollHeight + 1 + 'px';
-        }
-
-        textarea.addEventListener('input', resizeTextarea);
-
-        // Initial resize
-        resizeTextarea();
-
-        // Resize on window resize
-        window.addEventListener('resize', resizeTextarea);
-    </script>
+    <script src="/nav.js"></script>
 </body>
-</html>
+</html> 
